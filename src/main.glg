@@ -1,0 +1,88 @@
+// Gletch-a-sketch
+// written by Dorbell: https://github.com/Dorbellprod
+// 7/7/2022
+
+set ww, 500
+set wh, 500
+set cw, 50
+set ch, 50
+op $cw, -, 1
+set cw_minusone, $cw
+op $cw, +, 1
+
+op $ch, -, 1
+set ch_minusone, $cw
+op $ch, +, 1
+
+
+init $ww, $wh, $cw, $ch
+
+// Cursor
+set xpos, 0
+set ypos, 0
+
+// Colour
+set col_red,        16711680
+set col_yellow,     16776960
+set col_blue,       255
+set col_selection,  1
+set col_clear,      16777215
+set_clear $col_clear
+
+clear
+#GAME_LOOP:
+    handle_input
+    ifkey W, 2
+        op $ypos, -, 1
+    
+
+    ifkey S, 2
+        op $ypos, +, 1
+
+
+    ifkey A, 2
+        op $xpos, -, 1
+
+
+    ifkey D, 2
+        op $xpos, +, 1
+
+    // Clamp
+    if $xpos, <=, 0, 2
+        set xpos, 0
+
+    if $ypos, <=, 0, 2
+        set ypos, 0
+
+    if $xpos, >=, $cw, 2
+        set xpos, $cw_minusone
+    
+    if $ypos, >=, $ch, 2
+        set ypos, $ch_minusone
+    
+    
+    ifkey LShift, 5
+        op $col_selection, +, 1
+        if $col_selection, >, 3, 2
+            set col_selection, 1
+
+    if $col_selection, ==, 1, 2
+        put $xpos, $ypos, $col_red
+
+    if $col_selection, ==, 2, 2
+        put $xpos, $ypos, $col_yellow
+
+    if $col_selection, ==, 3, 2
+        put $xpos, $ypos, $col_blue
+
+
+    ifkey Space, 2
+        clear
+    
+    display
+
+sleep 17
+goto GAME_LOOP
+
+
+exit 0
