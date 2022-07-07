@@ -1,5 +1,6 @@
 # Gletch-A-Sketch
 It's like the Etch-A-Sketch toy, but implemented in the [Glang](https://github.com/blidddev/glang) programming language by [Blid](https://youtube.com/BlidDev)!
+This was created live on my [Twitch](https://twitch.tv/Dorbellprod).
 ## How to run
 1. Follow instructions in the [Glang repository](https://github.com/bliddev/glang) on setting up the Glang interpreter.
 2. With your interpreter located, run it with `main.glg`.
