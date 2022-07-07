@@ -1,5 +1,5 @@
 # Gletch-A-Sketch
-It's like the Etch-A-Sketch toy, but implemented in the [Glang](https://github.com/blidddev/glang) programming language by [Blid](https://youtube.com/BlidDev)!
+It's like the Etch-A-Sketch toy, but implemented in the [Glang](https://github.com/blidddev/glang) programming language!
 This was created live on my [Twitch](https://twitch.tv/Dorbellprod).
 ## How to run
 1. Follow instructions in the [Glang repository](https://github.com/bliddev/glang) on setting up the Glang interpreter.
@@ -13,3 +13,5 @@ e.g.
 - Use WASD to control your "cursor".
 - Use LShift to alternate between colours red, yellow, and blue.
 - Press Space to clear the screen.
+# Credits
+[Blid](https://youtube.com/BlidDev) - programming language
