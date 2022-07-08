@@ -15,5 +15,6 @@ e.g.
 - Press Space to clear the screen.
 ## Screenshots
 <img src="res/screenshot_1.png" alt="Courtesy of Blid.">
+
 # Credits
 [Blid](https://youtube.com/BlidDev) - programming language
