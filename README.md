@@ -11,7 +11,7 @@ e.g.
 ```
 ## How to use
 - Use WASD to control your "cursor".
-- Use LShift to alternate between colours red, yellow, and blue.
+- Use LShift to alternate between colours red, yellow, blue, and white.
 - Press Space to clear the screen.
 ## Screenshots
 <img src="res/screenshot_1.png" alt="Courtesy of Blid.">
