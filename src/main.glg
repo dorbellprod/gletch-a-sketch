@@ -22,12 +22,13 @@ set xpos, 0
 set ypos, 0
 
 // Colour
-set col_red,        16711680
-set col_yellow,     16776960
-set col_blue,       255
-set col_selection,  1
-set col_clear,      16777215
-set_clear $col_clear
+set col_red,            16711680
+set col_yellow,         16776960
+set col_blue,           255
+set col_white,          16777215
+set col_selection,      1
+set col_max_selection,  4
+set_clear $col_white
 
 clear
 #GAME_LOOP:
@@ -63,7 +64,7 @@ clear
     
     ifkey LShift, 5
         op $col_selection, +, 1
-        if $col_selection, >, 3, 2
+        if $col_selection, >, $col_max_selection, 2
             set col_selection, 1
 
     if $col_selection, ==, 1, 2
@@ -74,13 +75,16 @@ clear
 
     if $col_selection, ==, 3, 2
         put $xpos, $ypos, $col_blue
-
+    
+    if $col_selection, ==, 4, 2
+        put $xpos, $ypos, $col_white
 
     ifkey Space, 2
         clear
     
     display
 
+// Cap to 60 FPS
 sleep 17
 goto GAME_LOOP
 
